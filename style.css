@@ -19,12 +19,26 @@
     font-weight: 500;
 }
 
-.header a.nav-link
-{
+.header a.nav-link {
     color: #fff;
     text-transform: uppercase;
     font-size: 18px;
+    position: relative;  
+    text-decoration: none; 
 }
+.header a.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0;
+    height: 2px; 
+    background-color: red;
+    transition: width 0.3s ease; 
+}
+.header a.nav-link:hover::after {
+    width: 100%;  
+}c
 .header li.nav-item
 {
     padding:0 10px
@@ -41,11 +55,14 @@
     padding-top: 10px;
 }
 .hero-section {
-    background:  linear-gradient(#000000c4, #000000c4), url(./images/campus.jpg) no-repeat center center/cover;
-    height: 100vh;
+    background:  linear-gradient(#000000c4, #000000c4), 
+    url(./images/campus.jpg) no-repeat center center/cover;
+    /* height: 100vh; */
+    padding: 4rem 0;
+    position: relative;
 }
 .hero-section .hero-content h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -111,13 +128,12 @@ header {
 .gallery-item img:hover {
     transform: scale(1.1    );
 }
-  
-
 .aoutbanner
 {
     width: 100%;
     height: 100vh;
-    background-image: url(./images/campus.jpg);
+    background-image: linear-gradient(#000000c4, #000000c4),url(./images/university-6699377_1280.jpg);
+    color: #fff;
 }
 .about_content {
     HEIGHT: 90vh;
@@ -128,4 +144,35 @@ header {
 .mymap iframe
 {
     width: 100%;
+}
+.gallerybanner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#000000c4, #000000c4),url(./images/campus2.jpg);
+    color: #fff;
+}
+.navbar-dark .navbar-toggler
+{
+    background-color: black !important;
+}
+.enquiry a
+{
+    text-decoration: none;
+    color:#fff;
+    background-color: #ff0000;
+    padding: 10px;
+    position: absolute;
+    right: -17px;
+    bottom: 20px;
+    rotate: -90deg;
+}
+.fa-whatsapp
+{
+    background-color: green;
+    color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    font-size: 50px;
+    left: 20px;
 }
